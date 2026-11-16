@@ -1,0 +1,4 @@
+# Cabeçalhos da Cloudflare Pages
+/api/*
+  Cache-Control: no-store
+  X-Content-Type-Options: nosniff

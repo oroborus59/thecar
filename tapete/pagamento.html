@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pagamento Pix | UltraCar</title>
+<meta name="description" content="Finalize sua compra UltraCar com Pix.">
+<meta name="theme-color" content="#121416">
+<link rel="icon" href="images/favicon.png" type="image/png">
+<style>
+:root{color-scheme:light;--ink:#17191b;--muted:#5a6066;--line:#dedfe1;--wash:#f5f6f7;--orange:#ea580c;--dark:#121416;--ok:#166534;--bad:#9f1239}
+*{box-sizing:border-box}body{margin:0;background:var(--wash);color:var(--ink);font:16px/1.55 Arial,Helvetica,sans-serif}a{color:inherit}.top{background:var(--dark);padding:16px 20px;color:white}.topinner{max-width:940px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-weight:900;letter-spacing:.03em;color:#fff;text-decoration:none}.back{font-size:14px;color:#fff;text-decoration:none}.wrap{max-width:940px;margin:30px auto;padding:0 16px 48px}.heading{margin:0 0 8px;font-size:clamp(27px,4vw,37px);line-height:1.16;letter-spacing:-.03em}.intro{color:var(--muted);margin:0 0 24px}.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.8fr);gap:22px;align-items:start}.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 4px 18px #00000006}.card h2{font-size:19px;margin:0 0 18px}.line{display:flex;justify-content:space-between;gap:16px;margin:8px 0;color:var(--muted);font-size:14px}.line strong{color:var(--ink);text-align:right;overflow-wrap:anywhere}.total{border-top:1px solid var(--line);margin-top:18px;padding-top:17px;display:flex;justify-content:space-between;gap:16px;font-size:18px;font-weight:800}.total strong{font-size:23px;color:var(--orange)}.hint{font-size:13px;color:var(--muted);margin:14px 0 0}.field{display:grid;gap:6px;margin:0 0 15px}.field label{font-size:14px;font-weight:700}.field select,.field input{width:100%;border:1px solid #bfc3c7;border-radius:10px;padding:13px 14px;font:inherit;background:#fff}.field input:focus{outline:3px solid #ea580c32;border-color:var(--orange)}.btn{width:100%;background:var(--orange);color:#fff;border:0;border-radius:11px;padding:14px 18px;font:700 16px Arial,sans-serif;cursor:pointer}.btn:hover{background:#c2410c}.btn:disabled{opacity:.6;cursor:wait}.status{margin:14px 0 0;font-size:14px;color:var(--muted)}.status.error{color:var(--bad)}.pixResult{margin-top:20px;border-top:1px solid var(--line);padding-top:20px}.pixResult h2{margin-bottom:8px}.qr{display:flex;justify-content:center;margin:16px 0}.qr canvas,.qr img{max-width:100%;height:auto;border:10px solid white}.copycode{width:100%;min-height:100px;resize:vertical;font:12px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;border:1px solid var(--line);border-radius:10px;padding:12px;background:#fafafa}.copybtn{margin-top:10px;background:var(--dark)}.small{font-size:12px;color:var(--muted)}.hidden{display:none!important}.notice{background:#fff8ed;border:1px solid #ffdec3;border-radius:12px;padding:13px 14px;color:#71350d;font-size:13px;margin-top:16px}.payState{display:flex;align-items:center;gap:10px;margin:14px 0 0;padding:12px 14px;border-radius:12px;background:var(--wash);font-size:14px;font-weight:700}.payState .dot{width:10px;height:10px;border-radius:50%;background:var(--orange);flex:none;animation:pulse 1.4s ease-in-out infinite}.payState.ok{background:#ecfdf3;color:var(--ok)}.payState.ok .dot{background:var(--ok);animation:none}.payState.bad{background:#fff1f2;color:var(--bad)}.payState.bad .dot{background:var(--bad);animation:none}@keyframes pulse{50%{opacity:.35}}@media(prefers-reduced-motion:reduce){.payState .dot{animation:none}}.paidBox{text-align:center;padding:8px 0}.paidBox h2{color:var(--ok);font-size:24px;margin:6px 0 8px}.foot{text-align:center;color:var(--muted);font-size:12px;margin-top:24px}@media(max-width:720px){.wrap{margin-top:22px}.cols{grid-template-columns:1fr}.card{padding:20px}.topinner{padding:0 2px}}
+</style>
+<script src="js/checkout-config.js?v=20261113-1" defer></script>
+<script src="js/pagamento.js?v=20261113-1" defer></script>
+</head>
+<body>
+<header class="top"><div class="topinner"><a class="brand" href="../index.html">ULTRACAR</a><a class="back" href="index.html">← Voltar aos produtos</a></div></header>
+<main class="wrap">
+  <p class="small">CHECKOUT ULTRACAR</p><h1 class="heading">Finalize seu pagamento</h1><p class="intro">Gere seu Pix e pague no aplicativo do seu banco. Você continuará nesta página da UltraCar.</p>
+  <div class="cols">
+    <section class="card" aria-labelledby="summaryTitle"><h2 id="summaryTitle">Resumo da compra</h2>
+      <div class="line"><span>Kit</span><strong id="kitName">Kit Interno</strong></div>
+      <div class="line"><span>Veículo</span><strong id="vehicleSummary">Não informado</strong></div>
+      <div class="line"><span>Cor</span><strong id="colorSummary">Preto</strong></div>
+      <div class="total"><span>Total</span><strong id="totalPrice">R$ 97,90</strong></div>
+      <p class="hint">Pagamento via Pix. Frete grátis.</p>
+    </section>
+    <section class="card" aria-labelledby="buyerTitle"><h2 id="buyerTitle">Seus dados</h2>
+      <form id="paymentForm">
+        <div class="field"><label for="buyerName">Nome completo</label><input id="buyerName" name="name" autocomplete="name" maxlength="100" required></div>
+        <div class="field"><label for="buyerEmail">E-mail</label><input id="buyerEmail" name="email" type="email" autocomplete="email" maxlength="150" required></div>
+        <div class="field"><label for="buyerPhone">WhatsApp com DDD</label><input id="buyerPhone" name="buyerPhone" autocomplete="tel" maxlength="20" inputmode="tel" required></div>
+        <div class="field"><label for="buyerDocument">CPF</label><input id="buyerDocument" name="document" autocomplete="off" maxlength="14" inputmode="numeric" placeholder="000.000.000-00" required></div>
+<div class="field"><label for="cep">CEP</label><input id="cep" name="cep" autocomplete="postal-code" maxlength="9" inputmode="numeric" pattern="[0-9]{5}-?[0-9]{3}" required></div>
+<div class="field"><label for="street">Rua / avenida</label><input id="street" name="street" autocomplete="address-line1" maxlength="120"  required></div>
+<div class="field"><label for="number">Número (ou S/N)</label><input id="number" name="number" autocomplete="off" maxlength="15"  required></div>
+<div class="field"><label for="complement">Complemento (opcional)</label><input id="complement" name="complement" autocomplete="address-line2" maxlength="100"  ></div>
+<div class="field"><label for="district">Bairro</label><input id="district" name="district" autocomplete="off" maxlength="80"  required></div>
+<div class="field"><label for="city">Cidade</label><input id="city" name="city" autocomplete="address-level2" maxlength="80"  required></div>
+<div class="field"><label for="uf">Estado</label><select id="uf" required><option value="">Selecione</option><option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option><option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option><option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option><option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option><option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option><option>SE</option><option>TO</option></select></div><p class="small">Seus dados serão usados para processar a compra e entregar o pedido. <a href="../politica-de-privacidade.html">Política de privacidade</a>.</p><button id="generateButton" class="btn" type="submit">Gerar Pix</button>
+        <p id="status" class="status" role="status" aria-live="polite">Depois de gerar, escaneie o QR Code ou copie o código Pix.</p>
+      </form>
+      <div id="pixResult" class="pixResult hidden" aria-live="polite">
+        <h2>Pix pronto</h2><p class="hint">Escaneie o QR Code com o app do seu banco ou copie o código abaixo.</p>
+        <div id="pixQr" class="qr" aria-label="QR Code Pix"></div>
+        <label class="field" for="pixCopyPaste"><span>Pix copia e cola</span><textarea id="pixCopyPaste" class="copycode" readonly></textarea></label>
+        <button id="copyButton" class="btn copybtn" type="button">Copiar código Pix</button>
+        <p id="expiry" class="small"></p>
+        <div id="payState" class="payState" role="status" aria-live="polite"><span class="dot" aria-hidden="true"></span><span id="payStateText">Aguardando pagamento…</span></div>
+      </div>
+      <div id="paidBox" class="paidBox hidden" role="status" aria-live="polite">
+        <h2>Pagamento confirmado!</h2>
+        <p>Recebemos seu Pix. Você vai receber a confirmação do pedido no seu e-mail e WhatsApp.</p>
+        <p class="small">Código do pedido: <strong id="paidOrderId"></strong></p>
+      </div>
+    </section>
+  </div>
+  <p class="foot">Pagamento via Pix. A UltraCar não solicita a senha do seu banco.</p>
+</main>
+</body>
+</html>
